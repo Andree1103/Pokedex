@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { ProgressBar } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { colorTypeGradients } from '../utils/utils';
 import AppNavbar from './AppNavbar';
@@ -21,7 +21,10 @@ const CharacterDetail = () => {
     } else {
         finalColor = colorTypeGradients(pokemon.types?.[0].type?.name, pokemon.types?.[0].type?.name, pokemon.types?.length);
     }
-    console.log(pokemon)
+    const navigate = useNavigate()
+     const goBack = () => {
+        navigate(-1)
+    }
     return (
         <div>
             <AppNavbar/>
@@ -107,6 +110,7 @@ const CharacterDetail = () => {
 
                 </div>
             </div>
+            <button className='btn_back' onClick={goBack}>Back</button>
         </div>
     );
 };
