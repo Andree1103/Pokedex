@@ -1,0 +1,473 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+:root {
+  --grass: #5FBD58;
+  --bug: #92BC2C;
+  --dark: #595761;
+  --dragon: #0C69C8;
+  --electric: #F2D94E;
+  --fairy: #EE90E6;
+  --fighting: #D3425F;
+  --fire: #dc872f;
+  --flying: #A1BBEC;
+  --ghost: #5F6DBC;
+  --ground: #DA7C4D;
+  --ice: #75D0C1;
+  --normal: #A0A29F;
+  --poison: #B763CF;
+  --psychic: #ff2ca8;
+  --rock: #a38c21;
+  --steel: #5695A3;
+  --water: #539DDF;
+}
+*{
+  padding: 0;
+  box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.character-list {
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  width: 90%;
+}
+
+li {
+  width: 30, 333%;
+  padding: 10px;
+}
+
+.search_container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 2rem auto;
+}
+
+.input_search {
+  border: none;
+  padding: 10px 40px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.btn_search {
+  background: #ff5252;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.select_type {
+  border: none;
+  padding: 10px 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+
+#card {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 260px;
+}
+
+#card img {
+  width: 162px;
+  height: 149px;
+}
+
+
+
+.read-the-docs {
+  color: #888;
+}
+
+.Inf {
+  justify-content: center;
+  display: flex;
+  column-gap: 2rem;
+  line-height: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.btn_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn_next {
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.content_Card {
+  background: white;
+  padding-top: 10px;
+}
+
+.tip_hab {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cont_poke {
+  border-bottom: 1px solid rgba(187, 179, 179, 0.747);
+}
+
+.tipo {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.tipo span {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.habi {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.habi span {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: rgb(37, 37, 37);
+  border: 1px solid;
+}
+
+.grid_pokemon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  border-top: 1px solid gray;
+  padding-top: 10px;
+}
+
+.grass {
+  background: var(--grass);
+  box-shadow: 0 0 20px var(--grass);
+}
+
+.bug {
+  background: var(--bug);
+  box-shadow: 0 0 20px var(--bug);
+}
+
+.dark {
+  background: var(--dark);
+  box-shadow: 0 0 20px var(--dark);
+}
+
+.dragon {
+  background: var(--dragon);
+  box-shadow: 0 0 20px var(--dragon);
+}
+
+.electric {
+  background: var(--electric);
+  box-shadow: 0 0 20px #796d26;
+}
+
+.fairy {
+  background: var(--fairy);
+  box-shadow: 0 0 20px var(--fairy);
+}
+
+.fighting {
+  background: var(--fighting);
+  box-shadow: 0 0 20px var(--fighting);
+}
+
+.flying {
+  background: var(--flying);
+  box-shadow: 0 0 20px var(--flying);
+}
+
+.ghost {
+  background: var(--ghost);
+  box-shadow: 0 0 20px var(--ghost);
+}
+
+.ground {
+  background: var(--ground);
+  box-shadow: 0 0 20px var(--ground);
+}
+
+.ice {
+  background: var(--ice);
+  box-shadow: 0 0 20px var(--ice);
+}
+
+.normal {
+  background: var(--normal);
+  box-shadow: 0 0 20px var(--normal);
+}
+
+.poison {
+  background: var(--poison);
+  box-shadow: 0 0 20px var(--poison);
+}
+
+.psychic {
+  background: var(--psychic);
+  box-shadow: 0 0 20px var(--psychic);
+}
+
+.rock {
+  background: var(--rock);
+  box-shadow: 0 0 20px var(--rock);
+}
+
+.steel {
+  background: var(--steel);
+  box-shadow: 0 0 20px var(--steel);
+}
+
+.water {
+  background: var(--water);
+  box-shadow: 0 0 20px var(--water);
+}
+
+.fire {
+  background: var(--fire);
+  box-shadow: 0 0 20px var(--fire);
+}
+
+/* letras*/
+.grassL {
+  color: var(--grass);
+}
+
+.bugL {
+  color: var(--bug);
+}
+
+.darkL {
+  color: var(--dark);
+}
+
+.dragonL {
+  color: var(--dragon);
+}
+
+.electricL {
+  color: var(--electric);
+}
+
+.fairyL {
+  color: var(--fairy);
+}
+
+.fightingL {
+  color: var(--fighting);
+}
+
+.flyingL {
+  color: var(--flying);
+}
+
+.ghostL {
+  color: var(--ghost);
+}
+
+.groundL {
+  color: var(--ground);
+}
+
+.iceL {
+  color: var(--ice);
+}
+
+.normalL {
+  color: var(--normal);
+}
+
+.poisonL {
+  color: var(--poison);
+}
+
+.psychicL {
+  color: var(--psychic);
+}
+
+.rockL {
+  color: var(--rock);
+}
+
+.steelL {
+  color: var(--steel);
+}
+
+.waterL {
+  color: var(--water);
+}
+
+.fireL {
+  color: var(--fire);
+}
+
+/* stats*/
+.progress {
+  border: 1px solid rgba(104, 94, 94, 0.651);
+  border-radius: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background-color: rgba(221, 156, 34, 0.932);
+  box-shadow: 0 0 20px rgba(221, 156, 34, 0.932);
+  border-radius: 10px;
+}
+
+.stat_hab {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail_content {
+  max-width: 1000px;
+  margin: 3rem auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.content_stat {
+  width: 80%;
+  margin: 10px auto;
+  padding-bottom: 50px;
+}
+
+.conten_move {
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  margin: 10px auto;
+  padding-bottom: 50px;
+}
+
+.move_card {
+  background: lightgray;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.name_trainer {
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+  height: 32px;
+  width: 200px;
+  max-width: 400px;
+}
+
+.btn_go {
+  background: #ff5252;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.img_logo{
+  width: 700px;
+}
+
+.body_ini {
+  background-image: url(https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  
+  
+}
+
+
+.title_trainer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.phr {
+  padding: 2rem;
+  font-weight: bold;
+}
+.img_nav{
+  width: 100px;
+}
+.pika {
+  width: 40px;
+}
+.img_detail{
+  width: 340px;
+  height: 310px;
+}
